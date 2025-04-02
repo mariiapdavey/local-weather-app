@@ -5,4 +5,9 @@ export interface ICurrentWeather {
     image: string
     temperature: number
     description: string
+    feels_like: number
+    temp_min: number
+    temp_max: number
+    humidity: number
+    speed: number
 }

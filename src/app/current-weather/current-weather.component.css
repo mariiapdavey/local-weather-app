@@ -1,0 +1,17 @@
+.flex-container {
+    display: flex;
+    gap: 10px;
+}
+
+.row {
+    flex-direction: row;
+    padding: 10px;
+    text-align: left;
+  }
+
+.column {
+    flex: 1;
+    flex-direction: column;
+    padding: 10px;
+    text-align: left;
+}

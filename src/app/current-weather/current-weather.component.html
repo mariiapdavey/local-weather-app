@@ -1,16 +1,25 @@
 <div>
     <div>
-        <span>{{current.city}}, {{current.country}}</span>
-        <br />
-        <span>{{current.date | date:'fullDate'}}</span>
+        <div>
+            {{current.city}}, {{current.country}}
+        </div>
+        <div>
+            {{current.date | date:'MMMM dd, YYYY'}}
+        </div>
+    </div>
+    <div>
+       {{current.date | date:'EEEE'}}
     </div>
 
     <div>
         <img [src]="current.image" />
-        <span>{{current.temperature | number:'1.0-0'}} &deg;F</span>
+        {{current.description}}
+        
     </div>
 
-    <div>
-        {{current.description}}
+    <div>  
+       <span>{{current.temperature | number:'1.0-0'}} &deg;F</span>
+       <span> Feels like {{current.feels_like | number:'1.0-0'}} &deg;F</span>
+
     </div>
 </div>
