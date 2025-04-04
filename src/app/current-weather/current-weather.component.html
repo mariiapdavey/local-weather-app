@@ -1,5 +1,8 @@
-<div>
-    <div>
+<div >
+    <div *ngIf="current.description === ''">
+        no data available
+    </div>
+    <div *ngIf="current.description !== ''" >
         <div>
             {{current.city}}, {{current.country}}
         </div>
@@ -22,4 +25,11 @@
        <span> Feels like {{current.feels_like | number:'1.0-0'}} &deg;F</span>
 
     </div>
+    <div>
+        <span>min {{current.temp_min | number:'1.0-0'}} &deg;F</span>
+        <span> max {{current.temp_max | number:'1.0-0'}} &deg;F</span>
+        <br />
+        <span> humidity: {{current.humidity}}%</span>
+    </div>
+    
 </div>

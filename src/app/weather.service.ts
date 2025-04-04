@@ -26,8 +26,8 @@ export class WeatherService {
       description: data.weather[0].description,
       image:`http://openweathermap.org/img/w/${data.weather[0].icon}.png`,
 
-      temp_min: data.main.temp_min, 
-      temp_max: data.main.temp_max, 
+      temp_min: data.main.temp_min * 9/5-459.67, 
+      temp_max: data.main.temp_max * 9/5-459.67, 
       humidity: data.main.humidity, 
       speed: data.wind.speed,
       feels_like: data.main.feels_like * 9/5-459.67
