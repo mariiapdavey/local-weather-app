@@ -1,35 +1,64 @@
-<div >
+<div class="weather-wrapper">
     <div *ngIf="current.description === ''">
         no data available
     </div>
     <div *ngIf="current.description !== ''" >
-        <div>
-            {{current.city}}, {{current.country}}
-        </div>
-        <div>
-            {{current.date | date:'MMMM dd, YYYY'}}
-        </div>
-    </div>
-    <div>
-       {{current.date | date:'EEEE'}}
-    </div>
-
-    <div>
-        <img [src]="current.image" />
-        {{current.description}}
         
-    </div>
 
-    <div>  
-       <span>{{current.temperature | number:'1.0-0'}} &deg;F</span>
-       <span> Feels like {{current.feels_like | number:'1.0-0'}} &deg;F</span>
+        <mat-card class="example-card" appearance="outlined">
+            <mat-card-header>
+              <mat-card-title class="city">
+                <i class="fa-solid fa-location-dot" style="color: #ffffff;"></i>
+                {{current.city}}, {{current.country}}</mat-card-title>
+              <mat-card-subtitle class="day">{{current.date | date:'EEEE' | uppercase}} <span class="date">{{current.date | date:'MMMM dd, YYYY'}}</span></mat-card-subtitle>
+            </mat-card-header>
 
-    </div>
-    <div>
-        <span>min {{current.temp_min | number:'1.0-0'}} &deg;F</span>
-        <span> max {{current.temp_max | number:'1.0-0'}} &deg;F</span>
-        <br />
-        <span> humidity: {{current.humidity}}%</span>
-    </div>
+            <div class="card-columns">
+                <div class="column">
+                    <div class="crop-box">
+                        <img mat-card-image [src]="current.image" alt="Current temperature" class="image">
+                    </div>
+                    
+                    <p class="description">{{current.description | titlecase}}</p>
+                    
+                </div>
+
+                <div class="column">
+                    <p class="temp">
+                        {{current.temperature | number:'1.0-0'}} &deg; </p>
+                    <span class="fl"> Feels Like {{current.feels_like | number:'1.0-0'}} &deg;F</span>
+
+                </div>
+                
+                <div class="column">
+                    <div>
+                        <div class="minmax">
+                            <span>
+                                <i class="fa-solid fa-angle-down" style="color: #ffffff;"></i> {{current.temp_min | number:'1.0-0'}} &deg;F  
+                            </span>
+        
+                            <span class="maxtemp">
+                                <i class="fa-solid fa-angle-up" style="color: #ffffff;"></i> {{current.temp_max | number:'1.0-0'}} &deg;F
+                            </span>
+                        </div>
+                        
+                        
+                            
+                        <div class="hum"> <i class="fa-solid fa-droplet" style="color: #ffffff;"></i> {{current.humidity}}%</div>
+                    </div>
+
+                </div>
+
+            
+
+            </div>
+
+            <mat-card>
+                
+            </mat-card>
+          
+            
+           
+          </mat-card>
     
 </div>

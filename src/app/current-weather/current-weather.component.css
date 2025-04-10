@@ -1,3 +1,10 @@
+.weather-wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    color: white;
+  }
 .flex-container {
     display: flex;
     gap: 10px;
@@ -9,9 +16,90 @@
     text-align: left;
   }
 
+.card-columns {
+    display: flex;
+    gap: 40px;
+  }
 .column {
     flex: 1;
-    flex-direction: column;
-    padding: 10px;
-    text-align: left;
 }
+
+.example-card {
+    max-width: 500px;
+    background-color: rgba(42, 41, 55, 0.3);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .example-header-image {
+    background-size: cover;
+  }
+
+  .date {
+    margin-left: 250px;
+    display: inline-block;
+    padding: 5px;
+  }
+  .day {
+    text-align: left;
+    background-color: rgba(42, 41, 55, 0.6);
+    padding-left: 5px;
+    color: white;
+  }
+
+  .description {
+    text-align: left;
+    margin-left: 15px;
+    white-space: nowrap;               /* Never wrap */
+    overflow: hidden;                  /* Prevent overflow */
+    font-size: clamp(12px, 2vw, 16px);
+  }
+
+  .crop-box {
+    width: 150px;
+    height: 120px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .image {
+    position: absolute;
+    width: 160px;
+    top: -20px;    /* shift image up/down */
+    left: -10px;   /* shift image left/right */
+    overflow: hidden;
+      
+  }
+
+  .temp {
+    font-size: 3.5em;
+    margin-top: 15px;
+    margin-bottom: 55px;
+  }
+.minmax{
+    margin-top: 20px;
+    white-space: nowrap;               /* Never wrap */
+    overflow: hidden;                  /* Prevent overflow */
+    font-size: clamp(12px, 2vw, 15px);
+}
+  .maxtemp{
+    padding-left: 8px;
+  }
+
+  .hum {
+    margin-top: 100px;
+    white-space: nowrap;               /* Never wrap */
+    overflow: hidden;                  /* Prevent overflow */
+    font-size: clamp(12px, 2vw, 16px);
+  }
+
+  .fl{
+    white-space: nowrap;               /* Never wrap */
+    overflow: hidden;                  /* Prevent overflow */
+    font-size: clamp(12px, 2vw, 16px); /* Responsive font size */
+      }
+
+ .city {
+    margin-bottom: 10px;
+ }
