@@ -49,8 +49,7 @@
   }
 
   .description {
-    text-align: left;
-    margin-left: 15px;
+    text-align: center;
     white-space: nowrap;               /* Never wrap */
     overflow: hidden;                  /* Prevent overflow */
     font-size: clamp(12px, 2vw, 16px);
@@ -81,7 +80,7 @@
     margin-top: 20px;
     white-space: nowrap;               /* Never wrap */
     overflow: hidden;                  /* Prevent overflow */
-    font-size: clamp(12px, 2vw, 15px);
+    font-size: clamp(12px, 2vw, 16px);
 }
   .maxtemp{
     padding-left: 8px;
