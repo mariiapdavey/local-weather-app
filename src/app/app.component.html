@@ -5,16 +5,16 @@
   </mat-toolbar-row>
 </mat-toolbar>    
   
-  <div>Your city, your forecast, right now! </div>
+  <div class="yourCity">Your city, your forecast, right now! </div>
     <div>
-      <app-city-search></app-city-search>
+      <app-city-search (searchEvent)="doSearch($event)"></app-city-search>
     </div>
  
   
 
   <h2> Current Weather </h2>
   <div>
-    <app-current-weather></app-current-weather>
+    <app-current-weather [current] ="currentWeather"></app-current-weather>
   </div>
   
 

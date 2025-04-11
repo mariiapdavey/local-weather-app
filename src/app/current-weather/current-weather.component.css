@@ -37,13 +37,13 @@
   }
 
   .date {
-    margin-left: 250px;
+    margin-left: 290px;
     display: inline-block;
     padding: 5px;
   }
   .day {
     text-align: left;
-    background-color: rgba(42, 41, 55, 0.6);
+    background-color: rgba(42, 41, 55, 0.5);
     padding-left: 5px;
     color: white;
   }
@@ -78,12 +78,13 @@
   }
 .minmax{
     margin-top: 20px;
+    margin-right: 10px;
     white-space: nowrap;               /* Never wrap */
     overflow: hidden;                  /* Prevent overflow */
     font-size: clamp(12px, 2vw, 16px);
 }
   .maxtemp{
-    padding-left: 8px;
+    padding-left: 5px;
   }
 
   .hum {

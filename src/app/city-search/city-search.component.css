@@ -1,0 +1,12 @@
+.search {
+    width: 350px;
+}
+.label {
+    font-size: 18px;
+    font-style: italic;
+}
+
+.hint {
+    font-size: 15px;
+    font-style: italic;
+}

@@ -1,8 +1,11 @@
 <form>
-    <mat-form-field>
-        <mat-label>Outline form field</mat-label>
-        <input matInput placeholder="Placeholder">
-        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-        <mat-hint>Hint</mat-hint>
+    <mat-form-field class="search">
+        <mat-label class="label">City name or postal code</mat-label>
+        <input matInput placeholder="City or zip" [formControl] ="search" >
+        <mat-icon matSuffix>search</mat-icon>
+        <mat-hint class="hint">Specify country code:'Seattle, US'</mat-hint>
+        <mat-error *ngIf="search.invalid">
+            Type two or more characters to search
+        </mat-error>
     </mat-form-field>
 </form>
