@@ -41,8 +41,8 @@
     align-items: center;        /* vertical centering */
     justify-content: center;    /* optional: horizontal centering */
     margin-left: 250px;
-    padding: 15px;
-    height: 40px; 
+    padding: 10px; 
+    font-size: clamp(12px, 2vw, 14px);
   }
   .day {
     display: flex;
