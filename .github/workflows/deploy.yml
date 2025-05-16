@@ -3,7 +3,8 @@ name: Deploy Angular App to GitHub Pages
 on:
   push:
     branches:
-      - main  # or your default branch
+      - main
+  workflow_dispatch:   # ✅ Add this line
 
 jobs:
   build-and-deploy:
@@ -21,9 +22,8 @@ jobs:
     - name: Install dependencies 🔧
       run: npm ci
 
-    - name: Build app 📦
-      run: |
-        npm run build -- --base-href=/local-weather-app/
+    - name: Build Angular app 📦
+      run: npm run build -- --base-href=/local-weather-app/
 
     - name: Deploy to GitHub Pages 🚀
       uses: JamesIves/github-pages-deploy-action@v4
