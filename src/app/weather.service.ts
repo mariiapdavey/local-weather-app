@@ -1,16 +1,16 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { environment } from '../environments/environment';
 import {map} from 'rxjs/operators';
 import { ICurrentWeatherData } from './icurrent-weather-data';
 import { ICurrentWeather } from './icurrent-weather';
+import { EnvService } from './env.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class WeatherService {
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient, private env: EnvService) { }
 
   getCurrentWeather(search: string|number, country?: string){
 
@@ -24,7 +24,9 @@ export class WeatherService {
       uriParams = `${uriParams}, ${country}`
     }
 
-    return this.httpClient.get<ICurrentWeatherData>(`https://api.openweathermap.org/data/2.5/weather?${uriParams}&appid=${environment.appId}`).pipe(map(data => this.transformToICurrentWeather(data)))
+    return this.httpClient
+      .get<ICurrentWeatherData>(`https://api.openweathermap.org/data/2.5/weather?${uriParams}&appid=${this.env.appId}`)
+      .pipe(map(data => this.transformToICurrentWeather(data)))
     
   }
 
